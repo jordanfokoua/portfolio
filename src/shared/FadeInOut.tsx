@@ -50,6 +50,7 @@ const FadeInOut: FC<FadeInOutProps> = ({
 				performExit();
 			}
 		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [show, animation]);
 
 	const performEnter = () => {

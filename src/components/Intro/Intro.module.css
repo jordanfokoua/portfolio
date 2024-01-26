@@ -1,0 +1,76 @@
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	height: 100vh;
+	padding-left: 25%;
+	color: white;
+}
+
+.intro {
+	color: #f0db4f;
+	font-size: 1.2rem;
+}
+
+.name {
+	color: white;
+	font-size: 5em;
+	font-weight: bold;
+}
+
+.role {
+	color: #cccccc;
+	font-size: 3.5rem;
+}
+
+.greeting {
+	color: #f0db4f;
+	font-size: 1.25rem;
+	font-weight: lighter;
+}
+
+.name {
+	color: white;
+	font-size: 2.5rem;
+}
+
+.role {
+	color: #cccccc;
+	font-size: 2rem;
+}
+
+.company {
+	color: #f0db4f;
+	text-decoration: none;
+}
+
+.company:hover {
+	text-decoration: underline;
+}
+
+.greeting,
+.name,
+.role,
+.description {
+	margin: 0;
+	margin-top: 0.5rem;
+	line-height: 1;
+}
+
+.name span {
+	display: inline-block;
+	line-height: 1;
+	margin: 0;
+}
+
+.role {
+	margin-top: 0.1rem;
+}
+
+.description {
+	max-width: 32vw;
+	text-align: left;
+	line-height: 1.5;
+	color: #fff;
+}

@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+// Components
+import Navbar from './components/Navbar/Navbar';
+import Intro from './components/Intro/Intro';
+import Experience from './components/Experience/Experience';
+import Contact from './components/Contact/Contact';
+import About from './components/About/About';
+import Footer from './components/Footer/Footer';
+import SocialIcons from './components/SocialIcons/SocialIcons';
+// Shared components
+import ScrollColorChange from './shared/ScrollColorChange';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+	return (
+		<ScrollColorChange className="App">
+			<SocialIcons />
+			<Navbar />
+			<Intro />
+			<About />
+			<Experience />
+			<Contact />
+			<Footer />
+		</ScrollColorChange>
+	);
+};
 
 export default App;

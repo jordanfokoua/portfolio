@@ -1,0 +1,24 @@
+.experience {
+    height: 100vh;
+	padding: 4rem;
+	color: #fff;
+}
+
+.content {
+	height: 100%;
+}
+
+.projects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.projectCard {
+	transition: transform 0.3s ease-in-out;
+}
+
+.projectCard:hover {
+	transform: scale(1.05);
+}

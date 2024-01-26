@@ -1,0 +1,58 @@
+.timelineDots {
+	width: 15%;
+}
+
+.timelineContainer {
+	display: flex;
+	padding-top: 2em;
+	width: 100%;
+	align-items: flex-start;
+	height: 100%;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.timelineItem {
+	display: flex;
+	height: 2.5em;
+	align-items: center;
+	margin-bottom: 1em;
+	align-items: center;
+}
+
+.timelineDot {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: grey;
+	z-index: 1;
+}
+
+.selected {
+	background-color: #F0DB4F;
+}
+
+.companyName {
+	margin-left: 10px;
+	color: #ccc;
+}
+
+.xpContent {
+	overflow: hidden;
+	transition: max-height 0.5s ease-in-out;
+	width: 80%;
+}
+
+.xpContentTitle {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.timelineItem:focus,
+.timelineItem:hover {
+	outline: none;
+}
+
+.timelineItem {
+	cursor: pointer;
+}

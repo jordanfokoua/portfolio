@@ -1,0 +1,13 @@
+.footer {
+	padding: 2rem;
+	text-align: center;
+	color: white;
+}
+
+.socialIcon {
+	transition: transform 0.3s ease-in-out;
+}
+
+.socialIcon:hover {
+	transform: rotate(360deg);
+}

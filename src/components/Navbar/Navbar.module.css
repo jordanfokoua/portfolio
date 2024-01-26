@@ -1,0 +1,43 @@
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	color: white;
+}
+
+.navMenu {
+	list-style: none;
+	display: flex;
+	counter-reset: item;
+}
+
+.navMenu li {
+	margin-right: 20px;
+	counter-increment: item;
+}
+
+.navMenu li:before {
+	content: '0' counter(item) '.';
+
+	color: #F0DB4F;
+}
+
+.navMenu a {
+	color: white;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.navMenu a:hover {
+	color: #F0DB4F;
+}
+
+.logoContainer {
+}
+
+.logo {
+	height: 50px;
+	margin-right: 20px;
+}

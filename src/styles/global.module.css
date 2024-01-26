@@ -1,0 +1,36 @@
+.section {
+	width: 70vw;
+	display: flex;
+	flex-direction: column;
+	justify-self: center;
+	height: 100vh;
+	padding: 0 10vw 0 10vw;
+	border-top: 1px solid #F0DB4F;
+	align-self: center;
+	justify-content: center;
+	align-items: center;
+	text-align: left;
+	color: #fff;
+	line-height: 1.6;
+}
+
+.sectionNumber {
+	color: #ffffff;
+	font-size: 0.8em;
+	font-weight: 300;
+	margin-right: 0.25em;
+}
+
+.sectionHeading {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+	color: #F0DB4F;
+	align-items: flex-end;
+}
+
+.sectionContent {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 50vh;
+}

@@ -1,0 +1,10 @@
+
+.contactButton {
+	justify-self: center;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

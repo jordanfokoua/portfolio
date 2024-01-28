@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './Logo.module.css';
-import { PROFILE } from '../../constants/profile';
+import logo from '../../assets/images/logo.png';
+interface LogoProps {
+	className?: string;
+}
 
-const Logo: React.FC = () => {
-	return (
-		<div className={styles.logo}>
-			<span className={styles.initials}>{PROFILE.INITIALS}</span>
-		</div>
-	);
+const Logo: React.FC<LogoProps> = ({ className = '' }) => {
+	const classes = [styles.logo, className].join(' ');
+	return <img src={logo} alt="Logo" className={classes} />;
 };
 
 export default Logo;

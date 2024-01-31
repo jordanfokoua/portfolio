@@ -1,37 +1,41 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import styles from './Intro.module.css';
-
+import Section from '../../shared/Section/Section';
 import { PROFILE } from '../../constants/profile';
 
 const Intro: React.FC = () => {
 	return (
-		<section id="intro" className={styles.intro}>
-			<p className={styles.greeting}>Hello, I am</p>
-			<TypeAnimation
-				sequence={[`${PROFILE.NAME} ${PROFILE.LASTNAME}.`, 1000]}
-				wrapper="span"
-				speed={10}
-				style={{ fontSize: '4em', display: 'inline-block' }}
-				repeat={Infinity}
-				className={styles.name}
-			/>
-			<h3 className={styles.role}>{PROFILE.ROLE}</h3>
-			<p className={styles.description}>
+		<Section
+			id="intro"
+			className="flex flex-col justify-center items-start h-screen lg:pl-[25%] text-white"
+		>
+			<p className="text-primary text-2xl font-light mt-2">Hello, I am</p>
+
+			<div className="w-full lg:w-auto mt-2">
+				<TypeAnimation
+					sequence={[`${PROFILE.NAME} ${PROFILE.LASTNAME}.`, 1000]}
+					wrapper="span"
+					speed={10}
+					style={{ fontSize: '3em', fontWeight: 600 }}
+					repeat={Infinity}
+					className="text-5xl lg:text-6xl font-bold block"
+				/>
+			</div>
+
+			<h3 className="text-grey-300 text-2xl lg:text-3xl mt-2">{PROFILE.ROLE}</h3>
+			<p className="max-w-full lg:max-w-[32vw] text-left text-lg leading-relaxed mt-2">
 				Delving into the realm of full stack web application development, I combine innovation with
 				technical expertise. Currently, I'm applying my skills as a bot buster{' '}
 				<a
+					className="text-primary no-underline hover:underline"
 					target="_blank"
 					rel="noopener noreferrer"
-					className={`companyHandle`}
 					href={PROFILE.COMPANY_URL}
-					data-replace={'@ ' + PROFILE?.COMPANY_NAME}
 				>
 					<span> @ {PROFILE?.COMPANY_NAME}</span>
-				</a>{' '}
-				, contributing to the frontline of digital security.
+				</a>
 			</p>
-		</section>
+		</Section>
 	);
 };
 

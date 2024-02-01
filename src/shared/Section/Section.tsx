@@ -1,6 +1,5 @@
-import React, { useRef, useEffect, useState, ReactNode, FC } from 'react';
+import { useRef, useEffect, useState, ReactNode, FC } from 'react';
 import { useOnScreen } from '../../hooks/screen';
-import globalStyles from '../../styles/global.module.css';
 import FadeInOut from '../FadeInOut';
 
 interface SectionProps {
@@ -22,7 +21,11 @@ const Section: FC<SectionProps> = ({ children, ...props }) => {
 	}, [isVisible, hasAppeared]);
 
 	return (
-		<section id={id} ref={ref} className={`${globalStyles.section} ${className}`}>
+		<section
+			id={id}
+			ref={ref}
+			className={`flex flex-col justify-center self-center items-center h-screen px-[10vw] border-t border-primary text-left text-white leading-normal ${className}`}
+		>
 			{hasAppeared ? (
 				<FadeInOut show={true} duration={500} animation="in">
 					{children}

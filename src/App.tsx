@@ -14,7 +14,7 @@ import './App.css';
 
 const App: React.FC = () => {
 	return (
-		<ScrollColorChange className="App">
+		<ScrollColorChange className='px-4 md:px-52' >
 			<SocialIcons />
 			<Navbar />
 			<Intro />

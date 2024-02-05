@@ -4,14 +4,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	background-color: #000000;
-}
-
-.App {
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center !important;
-	padding: 0 !important;
+	overflow-x: hidden;
 }
 
 .section {

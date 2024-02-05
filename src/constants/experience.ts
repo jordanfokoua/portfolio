@@ -1,4 +1,4 @@
-import { Experience } from "../types/experience";
+import { Experience } from '../types/experience';
 
 export const EXPERIENCES: Experience[] = [
 	{
@@ -12,9 +12,7 @@ export const EXPERIENCES: Experience[] = [
 		details: [
 			"Led development and maintenance of DataDome's JavaScript tags and server-side modules, including Node.js and Cloudflare, enhancing client integration.",
 			"Established best practices for deployment, optimizing JavaScript components' performance, resilience, security, and privacy.",
-			'Conducted proactive technology monitoring in emerging JavaScript and web development technologies, resulting in significant improvements in detection algorithms.',
 			'Acted as a technical consultant for the support team, ensuring smooth client integration and resolving complex technical challenges.',
-			'Managed critical incidents from identification to resolution, leading post-incident reviews to drive systemic improvements.',
 		],
 	},
 	{
@@ -27,12 +25,9 @@ export const EXPERIENCES: Experience[] = [
 			'Witco is a SaaS platform that helps companies improve their employees’ experience by providing a single point of contact for all their needs.',
 		details: [
 			"Spearheaded a team to develop the 'Request Center' module, leveraging technologies like GraphQL, Apollo, MongoDB, Angular, React, and React Native with a Test-Driven Development (TDD) approach.",
-			'Integrated external services such as CMMS, wellness, concierge, and catering with Meteor JS, Angular, and React Native.',
-			'Established unit and integration testing environments, implemented Continuous Integration (CI) with Git hooks, and documented coding guidelines and READMEs to enhance code quality.',
+			'Established unit and integration testing environments, implemented Continuous Integration with Git hooks, and documented coding guidelines and READMEs to enhance code quality.',
 			'Optimized an event-driven architecture using AWS Lambda, Kinesis Firehose, AWS S3, Hapi.js, and InfluxDB.',
-			'Collaborated on revamping the incident module, focusing on backend and frontend improvements.',
 			'Enhanced developer infrastructure with custom error handling for the Apollo server, automated integration of webviews and iframes, and streamlined MongoDB transactions and schema management with Plop.',
-			'Led a dojo on unit and integration testing, sharing best practices and knowledge with the team.',
 		],
 	},
 	{

@@ -1,15 +1,11 @@
 import React from 'react';
-import globalStyles from '../../styles/global.module.css';
 import ExperienceTimeline from './ExperienceTimeline';
 import Section from '../../shared/Section/Section';
 
 const Experience: React.FC = () => {
 	return (
-		<Section id="experience" className={`${globalStyles.section}`}>
-			<h2 className={`${globalStyles.sectionHeading}`}>
-				<span className={globalStyles.sectionNumber}>02.{'  '}</span>Experience
-			</h2>
-			<div className={globalStyles.sectionContent}>
+		<Section id="about" heading="Experience" number="02" className="pt-8">
+			<div className={`flex flex-col md:flex-row justify-between`}>
 				<ExperienceTimeline />
 			</div>
 		</Section>

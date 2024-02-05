@@ -7,7 +7,7 @@ const Intro: React.FC = () => {
 	return (
 		<Section
 			id="intro"
-			className="flex flex-col justify-center items-start h-screen lg:pl-[25%] text-white"
+			className="flex flex-col justify-center items-start h-screen  text-white"
 		>
 			<p className="text-primary text-2xl font-light mt-2">Hello, I am</p>
 

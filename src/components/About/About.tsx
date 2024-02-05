@@ -1,16 +1,12 @@
 import React from 'react';
 import Section from '../../shared/Section/Section';
 import { PROFILE } from '../../constants/profile';
-import globalStyles from '../../styles/global.module.css';
 
 const About: React.FC = () => {
 	return (
-		<Section id="about">
-			<h2 className={`${globalStyles.heading} ${globalStyles.sectionHeading}`}>
-				<span className={globalStyles.sectionNumber}>01.{'  '}</span>About Me
-			</h2>
-			<div className={`flex flex-col md:flex-row justify-around`}>
-				<div className="w-full md:w-1/2 md:mb-0">
+		<Section id="about" className='justify-center' heading="About Me" number="01">
+			<div className={`flex flex-col md:flex-row justify-between`}>
+				<div className="w-full md:w-4/6 md:mb-0">
 					{PROFILE.ABOUT.map((paragraph, index) => (
 						<div key={index} className="mb-3">
 							{paragraph}

@@ -1,5 +1,4 @@
 import React from 'react';
-import globalStyles from '../../styles/global.module.css';
 import Button from '../../shared/Button/Button';
 import Section from '../../shared/Section/Section';
 import { PROFILE } from '../../constants/profile';
@@ -11,10 +10,7 @@ const Contact: React.FC = () => {
 	};
 
 	return (
-		<Section id="contact" className={`${globalStyles.section} ${styles.contact}`}>
-			<h2 className={`${globalStyles.sectionHeading}`}>
-				<span className={globalStyles.sectionNumber}>03.{'  '}</span>Let's Get In Touch
-			</h2>
+		<Section id="contact" className='justify-center' heading="Let's Get In Touch" number="03">
 			<div className={`${styles.contact}`}>
 				<p>{PROFILE.CONTACT_MESSAGE}</p>
 				<Button onClick={sendEmail} label="Say Hello" className={`${styles.contactButton}`} />

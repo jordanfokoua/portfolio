@@ -1,4 +1,6 @@
 import { useState, useEffect, ReactNode, FC } from 'react';
+import { useSpring, animated } from '@react-spring/web';
+import throttle from 'lodash.throttle';
 import { COLORS } from '../constants/colors';
 
 interface ScrollColorChangeProps {
@@ -7,33 +9,53 @@ interface ScrollColorChangeProps {
 }
 
 const ScrollColorChange: FC<ScrollColorChangeProps> = ({ children, className }) => {
-	const [backgroundColor, setBackgroundColor] = useState(COLORS.BACKGROUND_4);
+	const [scrollY, setScrollY] = useState(0);
+
+	const [{ backgroundColor }, setBgColor] = useSpring(() => ({
+		backgroundColor: COLORS.BACKGROUND_3,
+	}));
 
 	useEffect(() => {
-		const handleScroll = () => {
-			const scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-			if (scrollPercentage < 0.25) {
-				setBackgroundColor(COLORS.BACKGROUND_4);
-			} else if (scrollPercentage < 0.50) {
-				setBackgroundColor(COLORS.BACKGROUND_2);
-			} else if (scrollPercentage < 0.75) {
-				setBackgroundColor(COLORS.BACKGROUND_3);
-			} else {
-				setBackgroundColor(COLORS.BACKGROUND_4);
-			}
-		};
+		const handleScroll = throttle(() => {
+			setScrollY(window.scrollY);
+		}, 100);
 
 		window.addEventListener('scroll', handleScroll);
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
+			handleScroll.cancel();
 		};
 	}, []);
 
+	useEffect(() => {
+		const scrollPercentage = scrollY / (document.body.scrollHeight - window.innerHeight);
+		let color = COLORS.BACKGROUND_3;
+
+		if (scrollPercentage < 0.2) {
+			color = COLORS.BACKGROUND_3;
+		} else if (scrollPercentage < 0.4) {
+			color = COLORS.BACKGROUND_2;
+		} else if (scrollPercentage < 0.6) {
+			color = COLORS.BACKGROUND_1;
+		} else if (scrollPercentage < 0.8) {
+			color = COLORS.BACKGROUND_2;
+		} else {
+			color = COLORS.BACKGROUND_3;
+		}
+
+		setBgColor.start({ backgroundColor: color });
+	}, [scrollY, setBgColor]);
 	return (
-		<div className={className} style={{ height: 'auto', transition: 'background-color 0.5s', backgroundColor }}>
+		<animated.div
+			className={className}
+			style={{
+				height: 'auto',
+				backgroundColor,
+			}}
+		>
 			{children}
-		</div>
+		</animated.div>
 	);
 };
 

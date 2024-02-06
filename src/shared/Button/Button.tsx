@@ -1,45 +1,42 @@
-import React, { FC, useState } from 'react';
+import React, { useState } from 'react';
 import { COLORS } from '../../constants/colors';
 import './Button.css';
+import { animated, useSpring } from '@react-spring/web';
 
 interface ButtonProps {
 	label?: string;
 	className?: string;
-	onClick ?: () => void;
+	onClick?: () => void;
 }
 
-const Button: FC<ButtonProps> = ({ label, className, onClick  }) => {
+const Button: React.FC<ButtonProps> = ({ label = 'Click Me!', className, onClick }) => {
 	const [isHovered, setIsHovered] = useState(false);
-	const fontColor = isHovered ? COLORS.BACKGROUND_4 : COLORS.PRIMARY;
-	const backgroundColor = isHovered ? COLORS.PRIMARY : 'transparent';
 
-	const style = {
-		backgroundColor,
-		color: fontColor,
-		borderRadius: '10px',
-		padding: '0.75em 1.25em',
-		fontSize: '1.2rem',
-		borderColor: fontColor,
-		cursor: 'pointer',
-		width: 'fit-content',
-	};
+	const springStyle = useSpring({
+		backgroundColor: isHovered ? COLORS.PRIMARY : 'transparent',
+		color: isHovered ? COLORS.BACKGROUND_3 : COLORS.PRIMARY,
+		borderColor: isHovered ? COLORS.BACKGROUND_3 : COLORS.PRIMARY,
+		config: { mass: 1, tension: 210, friction: 20 },
+	});
 
 	return (
-		<button
-			className={`${className} animated-button ${isHovered ? 'hovered' : ''}`}
+		<animated.button
+			className={`${className} animated-button`}
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
-			style={style}
-			onClick={onClick }
+			style={{
+				...springStyle,
+				borderRadius: '10px',
+				padding: '0.75em 1.25em',
+				fontSize: '1.2rem',
+				cursor: 'pointer',
+				width: 'fit-content',
+			}}
+			onClick={onClick}
 		>
 			{label}
-		</button>
+		</animated.button>
 	);
 };
 
 export default Button;
-
-Button.defaultProps = {
-	label: 'Click Me!',
-	className: '',
-};

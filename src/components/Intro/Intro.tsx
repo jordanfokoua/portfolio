@@ -27,10 +27,11 @@ const Intro: React.FC = () => {
 				Delving into the realm of full stack web application development, I combine innovation with
 				technical expertise. Currently, I'm applying my skills as a bot buster{' '}
 				<a
-					className="text-primary no-underline hover:underline"
+					className="companyHandle text-primary no-underline hover:underline"
 					target="_blank"
 					rel="noopener noreferrer"
 					href={PROFILE.COMPANY_URL}
+					data-replace={`@ ${PROFILE.COMPANY_NAME}`}
 				>
 					<span> @ {PROFILE?.COMPANY_NAME}</span>
 				</a>

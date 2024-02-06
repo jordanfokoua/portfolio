@@ -34,7 +34,9 @@ const Navbar: React.FC = () => {
 	};
 
 	return (
-		<nav className="flex items-center justify-between py-4 px-4 text-white fixed top-0 left-0 w-full z-50 bg-background-4 backdrop-blur-md">
+		<nav
+			className="flex items-center justify-between py-4 px-4 text-white fixed top-0 left-0 w-full z-50 bg-background-4 backdrop-filter backdrop-blur-lg bg-opacity-40 border-b border-background-4"
+		>
 			<Logo />
 
 			<HamburgerMenu onClick={handleMenuClick} />
@@ -46,7 +48,6 @@ const Navbar: React.FC = () => {
 			>
 				{menuItems.map((item, index) => (
 					<li key={item.id} className="px-3 py-2 md:py-0">
-						{/* Add numbering here */}
 						<a href={item.link} className="block md:inline-block">
 							<span className="mr-2 font-bold">{`${index + 1}.`}</span>
 							{item.name}

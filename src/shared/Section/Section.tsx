@@ -26,7 +26,7 @@ const Section: FC<SectionProps> = ({ children, ...props }) => {
 		<section
 			id={id}
 			ref={ref}
-			className={`flex flex-col justify-start md:justify-center h-screen px-[4vw] border-t border-primary text-left text-white leading-normal ${className}`}
+			className={`flex flex-col justify-start md:justify-center h-screen px-[4vw] border-b border-primary text-left text-white leading-normal ${className}`}
 		>
 			{hasAppeared ? (
 				<FadeInOut show={true} duration={500} animation="in">

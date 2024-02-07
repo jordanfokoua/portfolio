@@ -42,8 +42,6 @@ export const EXPERIENCES: Experience[] = [
 			'Implemented a graphical visualization module using HighchartsJS for enhanced data representation.',
 			'Optimized SQL queries reducing the load time of graphs with over 1000 curves from 16 seconds to just 10 seconds, significantly improving performance.',
 			'Managed the migration from Node v5 to Node v12 on a remote AWS EC2 instance, utilizing Docker and SSH tunneling for a seamless transition.',
-			'Authored comprehensive technical specifications for the project overhaul, including technical requirements, functional specifications, and needs assessment.',
-			'Adhered to best coding practices by integrating Husky, ESLint, and Prettier into the project, ensuring high code quality and consistency.',
 		],
 	},
 	{
@@ -60,7 +58,6 @@ export const EXPERIENCES: Experience[] = [
 			'Enhanced API security with Node Js, Express Js, Sequelize, and Passport.js for robust authentication.',
 			'Implemented shipping (Chronopost, UPS, Colissimo) and Paygreen payment APIs for comprehensive tracking and payment features.',
 			'Optimized backend to handle 12,000 requests/second for flash sales, using Sequelize data models and efficient request queuing.',
-			'Contributed to integration testing with Mocha, Chai, Sinon, and enforced coding best practices with code reviews, linting, and Git hooks.',
 		],
 	},
 	{

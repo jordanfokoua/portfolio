@@ -9,7 +9,7 @@ const Intro: React.FC = () => {
 			id="intro"
 			className="flex flex-col justify-center items-start h-screen  text-white"
 		>
-			<p className="text-primary text-2xl font-light mt-2">Hello, I am</p>
+			<p className="text-primary text-base font-light mt-2">Hello, I am</p>
 
 			<div className="w-full lg:w-auto mt-2">
 				<TypeAnimation

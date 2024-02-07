@@ -24,10 +24,10 @@ export const EXPERIENCES: Experience[] = [
 		description:
 			'Witco is a SaaS platform that helps companies improve their employees’ experience by providing a single point of contact for all their needs.',
 		details: [
-			"Spearheaded a team to develop the 'Request Center' module, leveraging technologies like GraphQL, Apollo, MongoDB, Angular, React, and React Native with a Test-Driven Development (TDD) approach.",
-			'Established unit and integration testing environments, implemented Continuous Integration with Git hooks, and documented coding guidelines and READMEs to enhance code quality.',
-			'Optimized an event-driven architecture using AWS Lambda, Kinesis Firehose, AWS S3, Hapi.js, and InfluxDB.',
-			'Enhanced developer infrastructure with custom error handling for the Apollo server, automated integration of webviews and iframes, and streamlined MongoDB transactions and schema management with Plop.',
+			"Led 'Request Center' module development with GraphQL, Apollo, MongoDB, Angular, React, and React Native using TDD.",
+			'Set up unit/integration testing, Continuous Integration via Git hooks, and documented coding standards for quality improvement.',
+			'Utilized AWS Lambda, Kinesis Firehose, S3, Hapi.js, and InfluxDB for an optimized event-driven architecture.',
+			'Upgraded developer tools with custom Apollo server error handling, webviews/iframe integration, and efficient MongoDB schema management.',
 		],
 	},
 	{
@@ -53,11 +53,11 @@ export const EXPERIENCES: Experience[] = [
 		description:
 			'eFashion Paris is a B2B marketplace for fashion professionals. It is a subsidiary of the French Federation of Women’s Ready-to-Wear.',
 		details: [
-			'Developed a hybrid e-commerce app with React Native, integrating push notifications (One Signal to Batch), unit tests (Jest/Enzyme), and deployed via Fastlane.',
-			'Worked with a 5-member team on a VueJs e-commerce platform overhaul, focusing on UI components, RESTFUL API integration, Jest testing, and VueX state management.',
-			'Enhanced API security with Node Js, Express Js, Sequelize, and Passport.js for robust authentication.',
-			'Implemented shipping (Chronopost, UPS, Colissimo) and Paygreen payment APIs for comprehensive tracking and payment features.',
-			'Optimized backend to handle 12,000 requests/second for flash sales, using Sequelize data models and efficient request queuing.',
+			'Built a React Native e-commerce app, incorporating push notifications, unit testing, and Fastlane deployment.',
+			'Contributed to a VueJs e-commerce site revamp with a team, focusing on UI, API integration, testing, and state management.',
+			'Strengthened API security using Node Js, Express Js, and Passport.js for enhanced authentication.',
+			'Integrated shipping and payment APIs for full-featured tracking and transactions.',
+			'Boosted backend performance to manage 12K requests/second during flash sales by optimizing Sequelize models and request handling.',
 		],
 	},
 	{

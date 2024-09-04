@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import Logo from '../Logo/Logo';
+
 import HamburgerMenu from '../../shared/Menu/Hamburger';
+import Logo from '../Logo/Logo';
 
 interface MenuItem {
 	id: number;
@@ -21,6 +22,11 @@ const menuItems: MenuItem[] = [
 	},
 	{
 		id: 3,
+		name: 'Blog',
+		link: '#blog',
+	},
+	{
+		id: 4,
 		name: 'Contact',
 		link: '#contact',
 	},
@@ -41,7 +47,7 @@ const Navbar: React.FC = () => {
 		<nav className="flex items-center justify-between py-4 px-4 text-white fixed top-0 left-0 w-full z-50 bg-background-4 backdrop-filter backdrop-blur-lg bg-opacity-40 border-b border-background-4">
 			<Logo />
 
-			<HamburgerMenu onClick={toggleMenu} />
+			<HamburgerMenu onClick={toggleMenu} isOpen={isOpen} />
 
 			<div
 				className={`absolute top-0 left-0 h-screen w-full flex flex-col items-center justify-center bg-background-4 bg-opacity-95 z-40 transform transition-transform duration-300 ease-in-out ${

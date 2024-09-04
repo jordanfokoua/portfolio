@@ -1,7 +1,7 @@
-import React from 'react';
 import Button from '../../shared/Button/Button';
-import Section from '../../shared/Section/Section';
 import { PROFILE } from '../../constants/profile';
+import React from 'react';
+import Section from '../../shared/Section/Section';
 
 const Contact: React.FC = () => {
 	const sendEmail = () => {
@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
 	};
 
 	return (
-		<Section id="contact" className="justify-center" heading="Let's Get In Touch" number="03">
+		<Section id="contact" className="justify-center" heading="Let's Get In Touch" number="04">
 			<div className="flex flex-col items-center">
 				<p className="text-center  mb-4">{PROFILE.CONTACT_MESSAGE}</p>
 				<Button

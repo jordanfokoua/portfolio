@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface HamburgerMenuProps {
 	onClick: (isOpen: boolean) => void;
+	isOpen: boolean;
 }
 
-const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ onClick }) => {
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ onClick, isOpen }) => {
 	const handleMenuClick = () => {
-		setIsMenuOpen(!isMenuOpen);
-		onClick(!isMenuOpen);
+		onClick(!isOpen);
 	};
 
 	return (
@@ -20,12 +18,12 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ onClick }) => {
 		>
 			<div
 				className={`w-full h-full flex justify-center items-center relative transition-transform duration-300 ${
-					isMenuOpen ? 'rotate-45' : 'rotate-0'
+					isOpen ? 'rotate-45' : 'rotate-0'
 				}`}
 			>
 				<div
 					className={`absolute transition-opacity duration-300 ${
-						isMenuOpen ? 'opacity-0' : 'opacity-100'
+						isOpen ? 'opacity-0' : 'opacity-100'
 					}`}
 				>
 					<svg
@@ -40,7 +38,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ onClick }) => {
 				</div>
 				<div
 					className={`absolute rotate-45 transition-opacity duration-300 ${
-						isMenuOpen ? 'opacity-100' : 'opacity-0'
+						isOpen ? 'opacity-100' : 'opacity-0'
 					}`}
 				>
 					<svg

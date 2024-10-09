@@ -6,6 +6,16 @@ const GHOST_CONTENT_API_KEY = '9d0eaffef0a31750ccfd5b6a14';
 
 export const blogPosts: Post[] = [
 	{
+		title: 'The tools I use as a Software Engineer to stay productive',
+		feature_image:
+			'https://images.unsplash.com/photo-1599256631012-9c2b32bfa8bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDIyfHx0b29sc3xlbnwwfHx8fDE3MjcwMTE3MzN8MA&ixlib=rb-4.0.3&q=80&w=2000',
+		published_at: '2024-10-03T00:00:00.000Z',
+		slug: 'productivity-tools',
+		excerpt:
+			'Managing multiple branches in a Git repository can sometimes be cumbersome, especially when switching between them frequently. If you’ve ever wished for an easier way to handle different branches simultaneously without the hassle of constantly stashing or committing changes, Git’s worktree feature is your solution.',
+		url: 'https://blog.jordanfokoua.dev/productivity-tools/',
+	},
+	{
 		title: 'Boost Your Git Game with Worktrees',
 		feature_image:
 			'https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDh8fHRyZWV8ZW58MHx8fHwxNzI1NDAzMTUxfDA&ixlib=rb-4.0.3&q=80&w=2000',

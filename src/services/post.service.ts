@@ -6,6 +6,16 @@ const GHOST_CONTENT_API_KEY = '9d0eaffef0a31750ccfd5b6a14';
 
 export const blogPosts: Post[] = [
 	{
+		title: 'How we used the ESR rule to lift MongoDB queries performance',
+		feature_image:
+			'https://images.unsplash.com/photo-1563107976-3375fc7a53db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDExfHxiZXR0ZXJ8ZW58MHx8fHwxNzMzMzUwNDIyfDA&ixlib=rb-4.0.3&q=80&w=2000',
+		published_at: '2024-12-12T18:30:00.000Z',
+		slug: 'database-performance',
+		excerpt:
+			'In my previous role at Witco as a full-stack engineer, I worked on multiple parts of the platform, including the front office and back office applications. However, the customer dashboard—the most query-intensive part of the system—was where performance challenges became most apparent.',
+		url: 'https://blog.jordanfokoua.dev/optimize-mongo-queries-with-esr/',
+	},
+	{
 		title: 'The tools I use as a Software Engineer to stay productive',
 		feature_image:
 			'https://images.unsplash.com/photo-1599256631012-9c2b32bfa8bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDIyfHx0b29sc3xlbnwwfHx8fDE3MjcwMTE3MzN8MA&ixlib=rb-4.0.3&q=80&w=2000',

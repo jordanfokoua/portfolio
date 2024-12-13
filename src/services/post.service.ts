@@ -6,7 +6,7 @@ const GHOST_CONTENT_API_KEY = '9d0eaffef0a31750ccfd5b6a14';
 
 export const blogPosts: Post[] = [
 	{
-		title: 'How we used the ESR rule to lift MongoDB queries performance',
+		title: 'How the ESR rule transformed my MongoDB query optimization workflow',
 		feature_image:
 			'https://images.unsplash.com/photo-1563107976-3375fc7a53db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDExfHxiZXR0ZXJ8ZW58MHx8fHwxNzMzMzUwNDIyfDA&ixlib=rb-4.0.3&q=80&w=2000',
 		published_at: '2024-12-12T18:30:00.000Z',

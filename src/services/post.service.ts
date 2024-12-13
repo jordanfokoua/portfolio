@@ -2,7 +2,7 @@ import { Post } from '../types/blog';
 import axios from 'axios';
 
 const GHOST_API_URL = 'https://blog-jordanfokoua.ghost.io';
-const GHOST_CONTENT_API_KEY = '9d0eaffef0a31750ccfd5b6a14';
+const GHOST_CONTENT_API_KEY = '';
 
 export const blogPosts: Post[] = [
 	{

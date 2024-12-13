@@ -12,7 +12,7 @@ export const blogPosts: Post[] = [
 		published_at: '2024-12-12T18:30:00.000Z',
 		slug: 'database-performance',
 		excerpt:
-			'In my previous role at Witco as a full-stack engineer, I worked on multiple parts of the platform, including the front office and back office applications. However, the customer dashboard—the most query-intensive part of the system—was where performance challenges became most apparent.',
+			'MongoDB is a powerful database, but poorly optimized queries can quickly become a bottleneck as your dataset and users grow. In this post, I’ll share how I tackled performance issues in a system that relied heavily on dynamic filters, complex sorting, and range-based queries.',
 		url: 'https://blog.jordanfokoua.dev/optimize-mongo-queries-with-esr/',
 	},
 	{

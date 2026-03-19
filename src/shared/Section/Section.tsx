@@ -1,7 +1,10 @@
-import { FC, ReactNode, useEffect, useRef, useState } from 'react';
-
-import FadeInOut from '../FadeInOut';
-import { useOnScreen } from '../../hooks/screen';
+import { FC, ReactNode } from 'react';
+import { motion, useReducedMotion, Variants } from 'framer-motion';
+import {
+	reducedFadeVariants,
+	sectionContainerVariants,
+	sectionItemVariants,
+} from '../motionConfig';
 
 interface SectionProps {
 	children: ReactNode;
@@ -11,40 +14,34 @@ interface SectionProps {
 	heading?: string;
 }
 
-const Section: FC<SectionProps> = ({ children, ...props }) => {
-	const { id, className = '', number, heading } = props;
-	const ref = useRef<HTMLDivElement>(null);
-	const isVisible = useOnScreen(ref);
-	const [hasAppeared, setHasAppeared] = useState(false);
-
-	useEffect(() => {
-		if (isVisible && !hasAppeared) {
-			setHasAppeared(true);
-		}
-	}, [isVisible, hasAppeared]);
+const Section: FC<SectionProps> = ({ children, id, className = '', number, heading }) => {
+	const reduceMotion = useReducedMotion();
+	const containerVariants: Variants = reduceMotion ? reducedFadeVariants : sectionContainerVariants;
+	const itemVariants: Variants = reduceMotion
+		? reducedFadeVariants
+		: sectionItemVariants;
 
 	return (
-		<section
+		<motion.section
 			id={id}
-			ref={ref}
-			className={`flex flex-col justify-start md:justify-center px-[4vw] border-b border-primary text-left text-white leading-normal ${className} min-h-screen`}
+			className={`flex flex-col justify-start md:justify-center px-[4vw] text-left text-white leading-normal ${className} min-h-screen border-b border-primary/25`}
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true, amount: 0.15, margin: '0px 0px -8% 0px' }}
+			variants={containerVariants}
 		>
-			{hasAppeared ? (
-				<FadeInOut show={true} duration={500} animation="in">
-					{heading && (
-						<h2 className="mb-8 text-3xl text-[#F0DB4F] mt-4">
-							<span className="text-white text-xl font-light mr-1">
-								{number ? number + '. ' : ''}
-							</span>
-							{heading}
-						</h2>
-					)}
-					{children}
-				</FadeInOut>
-			) : (
-				<>{children}</>
+			{heading && (
+				<motion.div variants={itemVariants} className="mb-8 mt-4">
+					<h2 className="font-display text-3xl md:text-4xl tracking-tight text-primary drop-shadow-[0_0_24px_rgba(240,219,79,0.15)]">
+						<span className="text-white/90 text-lg md:text-xl font-medium mr-2 tabular-nums">
+							{number ? `${number}.` : ''}
+						</span>
+						{heading}
+					</h2>
+				</motion.div>
 			)}
-		</section>
+			<motion.div variants={itemVariants}>{children}</motion.div>
+		</motion.section>
 	);
 };
 

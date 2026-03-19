@@ -21,7 +21,7 @@ const Blog: React.FC = () => {
 		<Section id="blog" className="justify-center" heading="My latest articles" number="03">
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 gap-8">
 				{blogPosts.map((post: Post, index: number) => (
-					<BlogPostCard post={post} key={index} />
+					<BlogPostCard post={post} key={post.slug} index={index} />
 				))}
 			</div>
 		</Section>

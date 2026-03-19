@@ -16,7 +16,7 @@ export const PROFILE = {
 		'Leading design and development efforts, I focus on creating scalable, robust systems. My approach is grounded in best practices and a relentless pursuit of emerging technologies, ensuring projects not only meet but exceed current standards.',
 		'Motivated by innovation and challenge, I aim to make impactful contributions to web development projects. My dedication is to develop solutions that are efficient, future-oriented, and at the forefront of the tech industry.',
 	],
-	SKILLS: ['JavaScript', 'TypeScript', 'React', 'Node.js', 'Docker', 'AWS'],
+	SKILLS: ['TypeScript', 'React', 'Ruby on Rails', 'Node.js', 'Docker', 'AWS'],
 	CONTACT_MESSAGE:
 		"While I'm not actively seeking new opportunities at the moment, my inbox remains open for any inquiries or just a friendly hello. I'll make every effort to respond!"
 };

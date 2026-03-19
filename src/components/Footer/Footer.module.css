@@ -1,7 +1,50 @@
 .footer {
-	padding: 2rem;
+	position: relative;
+	padding: 2.5rem 1.5rem;
 	text-align: center;
 	color: white;
+	overflow: hidden;
+	border-top: 1px solid rgba(240, 219, 79, 0.12);
+}
+
+.footer::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -50%;
+	width: 200%;
+	height: 1px;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(240, 219, 79, 0.5) 45%,
+		rgba(240, 219, 79, 0.5) 55%,
+		transparent
+	);
+	animation: footer-shine 8s ease-in-out infinite;
+}
+
+@keyframes footer-shine {
+	0% {
+		transform: translateX(-15%);
+		opacity: 0.3;
+	}
+	50% {
+		transform: translateX(15%);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-15%);
+		opacity: 0.3;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.footer::before {
+		animation: none;
+		opacity: 0.5;
+		transform: none;
+	}
 }
 
 .socialIcon {

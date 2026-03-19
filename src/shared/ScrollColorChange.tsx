@@ -2,6 +2,7 @@ import { useState, useEffect, ReactNode, FC } from 'react';
 import { useSpring, animated } from '@react-spring/web';
 import throttle from 'lodash.throttle';
 import { COLORS } from '../constants/colors';
+import AmbientBackdrop from './AmbientBackdrop';
 
 interface ScrollColorChangeProps {
 	children?: ReactNode;
@@ -48,13 +49,14 @@ const ScrollColorChange: FC<ScrollColorChangeProps> = ({ children, className }) 
 	}, [scrollY, setBgColor]);
 	return (
 		<animated.div
-			className={className}
+			className={`relative z-[2] min-h-screen ${className ?? ''}`}
 			style={{
 				height: 'auto',
 				backgroundColor,
 			}}
 		>
-			{children}
+			<AmbientBackdrop />
+			<div className="relative z-[2]">{children}</div>
 		</animated.div>
 	);
 };

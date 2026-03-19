@@ -1,11 +1,141 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,700;0,900;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;0,900;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&display=swap');
+
+:root {
+	--color-primary: #f0db4f;
+	--color-secondary: #323330;
+	--glow-primary: rgba(240, 219, 79, 0.45);
+	--glow-soft: rgba(240, 219, 79, 0.12);
+}
 
 body {
 	font-family: 'Montserrat', sans-serif;
 	background-color: #000000;
 	overflow-x: hidden;
+}
+
+.font-display {
+	font-family: 'Syne', 'Montserrat', sans-serif;
+}
+
+/* Ambient layer (primary-tinted, no extra hues) */
+.ambient-blob {
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(80px);
+	opacity: 0.35;
+	will-change: transform;
+}
+
+.ambient-blob--a {
+	width: min(55vw, 420px);
+	height: min(55vw, 420px);
+	top: -8%;
+	left: -10%;
+	background: radial-gradient(circle, var(--glow-primary) 0%, transparent 70%);
+	animation: ambient-drift-a 22s ease-in-out infinite;
+}
+
+.ambient-blob--b {
+	width: min(45vw, 360px);
+	height: min(45vw, 360px);
+	top: 35%;
+	right: -12%;
+	background: radial-gradient(circle, var(--glow-soft) 0%, transparent 65%);
+	animation: ambient-drift-b 28s ease-in-out infinite;
+}
+
+.ambient-blob--c {
+	width: min(70vw, 520px);
+	height: min(70vw, 520px);
+	bottom: -20%;
+	left: 20%;
+	background: radial-gradient(circle, rgba(240, 219, 79, 0.2) 0%, transparent 68%);
+	animation: ambient-drift-c 26s ease-in-out infinite;
+}
+
+.ambient-grain {
+	position: absolute;
+	inset: 0;
+	opacity: 0.04;
+	pointer-events: none;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+	mix-blend-mode: overlay;
+}
+
+@keyframes ambient-drift-a {
+	0%,
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+	50% {
+		transform: translate(6%, 10%) scale(1.08);
+	}
+}
+
+@keyframes ambient-drift-b {
+	0%,
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+	50% {
+		transform: translate(-8%, -6%) scale(1.12);
+	}
+}
+
+@keyframes ambient-drift-c {
+	0%,
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+	50% {
+		transform: translate(-5%, 8%) scale(1.05);
+	}
+}
+
+@keyframes scroll-hint-bounce {
+	0%,
+	100% {
+		transform: translateY(0);
+		opacity: 0.5;
+	}
+	50% {
+		transform: translateY(10px);
+		opacity: 1;
+	}
+}
+
+@keyframes primary-pulse-ring {
+	0% {
+		box-shadow: 0 0 0 0 rgba(240, 219, 79, 0.45);
+	}
+	70% {
+		box-shadow: 0 0 0 14px rgba(240, 219, 79, 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(240, 219, 79, 0);
+	}
+}
+
+.scroll-hint {
+	animation: scroll-hint-bounce 2.2s ease-in-out infinite;
+}
+
+.contact-cta-glow {
+	animation: primary-pulse-ring 2.5s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.ambient-blob,
+	.scroll-hint,
+	.contact-cta-glow {
+		animation: none !important;
+	}
+
+	.ambient-blob {
+		opacity: 0.2;
+	}
 }
 
 .section {

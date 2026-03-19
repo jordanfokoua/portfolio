@@ -1,6 +1,13 @@
 [build]
+  # `npm ci` + macOS-generated lockfiles often omit Linux optional natives (Tailwind oxide, lightningcss).
+  # `npm install` avoids npm/cli#4828 and picks the correct platform bindings on Netlify.
+  installCommand = "npm install"
   command = "npm run build"
   publish = "dist"
+
+[build.environment]
+  # @tailwindcss/oxide requires Node >= 20
+  NODE_VERSION = "22"
 
 [[redirects]]
   from = "/*"

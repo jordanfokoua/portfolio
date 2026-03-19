@@ -3,8 +3,8 @@ import React, { useState, useEffect, FC, CSSProperties, ReactNode } from 'react'
 type AnimationType = 'in' | 'out' | 'both';
 
 interface FadeInOutProps {
-	show: boolean;
-	duration: number;
+	show?: boolean;
+	duration?: number;
 	children: ReactNode;
 	className?: string;
 	style?: CSSProperties;
@@ -28,12 +28,12 @@ const transitionStyles: { [key in StatusType]: CSSProperties } = {
 };
 
 const FadeInOut: FC<FadeInOutProps> = ({
-	show,
-	duration,
+	show = false,
+	duration = 300,
 	children,
 	className,
 	style,
-	animation,
+	animation = 'both',
 }) => {
 	const [status, setStatus] = useState<StatusType>(UNMOUNTED);
 
@@ -83,12 +83,6 @@ const FadeInOut: FC<FadeInOutProps> = ({
 			{children}
 		</div>
 	);
-};
-
-FadeInOut.defaultProps = {
-	show: false,
-	duration: 300,
-	animation: 'both',
 };
 
 export default FadeInOut;

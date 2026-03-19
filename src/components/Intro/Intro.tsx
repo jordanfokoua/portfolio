@@ -93,8 +93,7 @@ const Intro: React.FC = () => {
 					style={descriptionProps}
 					className="max-w-full lg:max-w-[36rem] text-left text-base lg:text-lg leading-relaxed mt-4 text-white/85"
 				>
-					Delving into the realm of full stack web application development, I combine innovation with
-					technical expertise. Currently, I'm applying my skills as a bot buster
+					{PROFILE.INTRO_BEFORE_COMPANY_LINK}
 					<a
 						className="companyHandle text-primary no-underline hover:underline"
 						target="_blank"
@@ -102,14 +101,15 @@ const Intro: React.FC = () => {
 						href={PROFILE.COMPANY_URL}
 						data-replace={`@${PROFILE.COMPANY_NAME}`}
 					>
-						<span>@{PROFILE?.COMPANY_NAME}</span>
+						<span>@{PROFILE.COMPANY_NAME}</span>
 					</a>
+					{PROFILE.INTRO_AFTER_COMPANY_LINK}
 				</animated.p>
 			</div>
 
 			<motion.a
-				href="#about"
-				className="absolute bottom-10 left-1/2 z-[1] flex -translate-x-1/2 flex-col items-center gap-2 text-primary/80 text-xs font-semibold uppercase tracking-[0.2em] md:left-[calc(50%-4rem)]"
+				href="/#about"
+				className="absolute bottom-10 left-1/2 z-[1] flex -translate-x-1/2 flex-col items-center gap-2 text-primary/80 text-xs font-semibold uppercase tracking-[0.2em] rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/80 focus-visible:ring-offset-2 focus-visible:ring-offset-background-3 md:left-[calc(50%-4rem)]"
 				initial={{ opacity: 0, y: 8 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ delay: 1.4, duration: 0.5 }}

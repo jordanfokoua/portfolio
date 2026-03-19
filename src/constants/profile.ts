@@ -11,6 +11,11 @@ export const PROFILE = {
 	TWITTER: 'jordanFokoua',
 	COMPANY_NAME: 'Pennylane',
 	COMPANY_URL: 'https://www.pennylane.com/',
+	/** Text before the company link in the intro (include trailing space). */
+	INTRO_BEFORE_COMPANY_LINK:
+		"I work full stack on web applications—pairing solid engineering with product sense. Today I'm building with the team at ",
+	/** Text after the company link in the intro. */
+	INTRO_AFTER_COMPANY_LINK: '.',
 	ABOUT: [
 		"I'm a software engineer specialized in JavaScript and its ecosystem, bolstered by a master's in information systems. My expertise shines in crafting intuitive user interfaces and tackling technical challenges with innovative solutions.",
 		'Leading design and development efforts, I focus on creating scalable, robust systems. My approach is grounded in best practices and a relentless pursuit of emerging technologies, ensuring projects not only meet but exceed current standards.',

@@ -50,9 +50,9 @@ const ExperienceTimeline = () => {
 						rel="noopener noreferrer"
 						className="companyHandle mb-1"
 						href={selectedXp?.company_url}
-						data-replace={`@ ${selectedXp?.company}`}
+						data-replace={`@${selectedXp?.company}`}
 					>
-						<span> @ {selectedXp?.company}</span>
+						<span>@{selectedXp?.company}</span>
 					</a>
 				</div>
 				<span className="font-light text-sm">{selectedXp?.year}</span>

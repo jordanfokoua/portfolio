@@ -60,9 +60,9 @@ const Intro: React.FC = () => {
 					target="_blank"
 					rel="noopener noreferrer"
 					href={PROFILE.COMPANY_URL}
-					data-replace={`@ ${PROFILE.COMPANY_NAME}`}
+					data-replace={`@${PROFILE.COMPANY_NAME}`}
 				>
-					<span> @ {PROFILE?.COMPANY_NAME}</span>
+					<span>@{PROFILE?.COMPANY_NAME}</span>
 				</a>
 			</animated.p>
 		</Section>

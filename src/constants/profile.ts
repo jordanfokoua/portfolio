@@ -9,8 +9,8 @@ export const PROFILE = {
 	LINKEDIN: 'jordan-fokoua-951773153',
 	MEDIUM: '@mr.j237',
 	TWITTER: 'jordanFokoua',
-	COMPANY_NAME: 'DataDome',
-	COMPANY_URL: 'https://datadome.co/',
+	COMPANY_NAME: 'Pennylane',
+	COMPANY_URL: 'https://www.pennylane.com/',
 	ABOUT: [
 		"I'm a software engineer specialized in JavaScript and its ecosystem, bolstered by a master's in information systems. My expertise shines in crafting intuitive user interfaces and tackling technical challenges with innovative solutions.",
 		'Leading design and development efforts, I focus on creating scalable, robust systems. My approach is grounded in best practices and a relentless pursuit of emerging technologies, ensuring projects not only meet but exceed current standards.',

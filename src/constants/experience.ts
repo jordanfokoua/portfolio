@@ -4,9 +4,21 @@ export const EXPERIENCES: Experience[] = [
 	{
 		id: 1,
 		title: 'Software Engineer',
+		company: 'Pennylane',
+		company_url: 'https://www.pennylane.com/',
+		year: 'September 2025 - Present',
+		description:
+			'Pennylane is a cloud accounting and financial management platform that helps SMBs and accounting firms run billing, bookkeeping, and reporting in one place.',
+		details: [
+			'Building and shipping product features for Pennylane’s accounting and finance platform.',
+		],
+	},
+	{
+		id: 2,
+		title: 'Software Engineer',
 		company: 'DataDome',
 		company_url: 'https://datadome.co/',
-		year: 'April 2023 - Present',
+		year: 'April 2023 - June 2025',
 		description:
 			'Bot protection platform that leverages machine learning to protect websites, mobile apps and APIs from automated threats without impacting the flow of business-critical traffic.',
 		details: [
@@ -18,7 +30,7 @@ export const EXPERIENCES: Experience[] = [
 		],
 	},
 	{
-		id: 2,
+		id: 3,
 		title: 'Software Engineer',
 		company: 'Witco',
 		company_url: 'https://witco.io/',
@@ -33,7 +45,7 @@ export const EXPERIENCES: Experience[] = [
 		],
 	},
 	{
-		id: 3,
+		id: 4,
 		title: 'Software Engineer',
 		company: 'CANAL+',
 		company_url: 'https://www.canalplus.com/',
@@ -48,7 +60,7 @@ export const EXPERIENCES: Experience[] = [
 		],
 	},
 	{
-		id: 4,
+		id: 5,
 		title: 'Software Engineer',
 		company: 'eFashion Paris',
 		company_url: 'https://www.efashion-paris.com/',
@@ -64,7 +76,7 @@ export const EXPERIENCES: Experience[] = [
 		],
 	},
 	{
-		id: 5,
+		id: 6,
 		title: 'Frontend Developer',
 		company: 'Dipita Technologies',
 		company_url: 'https://www.seedstarsworld.com/startup/66462/',
